@@ -1,27 +1,27 @@
 int main()  
 {  
-    char expression[50]; // declaration of char type array  
-    int x=0, i=0; // declaration of two integer type variables  
+    char expression[50];  
+    int x=0, i=0;
     printf("\nEnter an expression");  
     scanf("%s", expression);  
-// Scanning the expression until we reach the end of the expression.     
+ 
  while(expression[i]!= '\0')  
     {  
     // Condition to check the symbol is '('     
      if(expression[i]=='(')  
         {  
-            x++;    // incrementing 'x' variable   
+            x++;      
         }  
      // condition to check the symbol is ')'     
      else if(expression[i]==')')  
         {  
-            x--;   // decrementing 'x' variable  
+            x--;   
             if(x<0)  
             break;  
         }  
-    i++;       // incrementing 'i' variable.  
+    i++;       
     }  
-    // Condition to check whether x is equal to 0 or not.  
+    
     if(x==0)  
     {  
         printf("Expression is balanced");  
